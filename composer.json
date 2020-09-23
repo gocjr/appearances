@@ -1,0 +1,14 @@
+{
+    "name": "gocjr/appearances",
+    "description": "Appearance plugin, manage the appearance of the application",
+    "type": "cakephp-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "gocjr",
+            "email": "giovaniocjr@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
