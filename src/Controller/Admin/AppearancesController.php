@@ -10,8 +10,8 @@ class AppearancesController extends AppController
     public function install(): void
     {
         $this->disableAutoRender();
-        $controller = strtolower($this->request->getParam('controller'));
-        $schema = new TableSchema($controller);
+
+        $schema = new Cake\Database\Schema\TableSchema('appearances');
         $schema
             ->addColumn('id', [
                 'type' => 'integer',
@@ -38,7 +38,7 @@ class AppearancesController extends AppController
                 'collate' => 'utf8_unicode_ci',
             ]);
     }
-    
+
     public function index()
     {
     }
