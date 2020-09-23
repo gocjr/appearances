@@ -17,4 +17,5 @@ class AppearancesTable extends AppTable
 
         $this->addBehavior('Timestamp');
     }
+
 }

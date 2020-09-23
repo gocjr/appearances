@@ -4,12 +4,11 @@ namespace Appearances\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Brand Entity
+ * Appearance Entity
  *
  * @property int $id
- * @property string|null $name
+ * @property string|null $title
  * @property string|null $slug
- * @property int $brand_fipe_id
  *
  * @property \App\Model\Entity\Model[] $models
  */
