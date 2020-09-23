@@ -1,6 +1,6 @@
 # Appearances plugin for CakePHP
 
-Permite gerenciar e aplicar diferentes tipos de layout para apliacação
+Permite gerenciar e aplicar diferentes tipos de layout para sua apliacação
 
 ## Installation
 
