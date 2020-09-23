@@ -9,6 +9,11 @@
             "email": "giovaniocjr@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Appearances\\":'src'
+        }
+    },
     "minimum-stability": "dev",
     "require": {}
 }
