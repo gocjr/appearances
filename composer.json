@@ -2,6 +2,7 @@
     "name": "gocjr/appearances",
     "description": "Appearance plugin, manage the appearance of the application",
     "type": "cakephp-plugin",
+    "version": "1.0",
     "license": "MIT",
     "authors": [
         {
@@ -16,5 +17,6 @@
     },
     "autoload-dev": {},
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {}
 }
