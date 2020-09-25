@@ -15,7 +15,7 @@ declare(strict_types=1);
  * @license   https://opensource.org/licenses/mit-license.php MIT License
  */
 
-namespace App\View;
+namespace Appearances\View;
 
 use Cake\View\View;
 
@@ -51,60 +51,10 @@ class AppView extends View
     public function initialize(): void
     {
         $this->loadHelper('Url', ['className' => 'Url']);
-        $this->loadHelper('Html', ['className' => 'Bootstrap4/Html', 'templates' => 'templates/bootstrap4_html']);
-        $this->loadHelper('Form', ['className' => 'Bootstrap4/Form', 'templates' => 'templates/bootstrap4_form']);
-        $this->loadHelper('Flash', ['templates' => 'templates/bootstrap4_flash']);
-        $this->loadHelper('Paginator', ['templates' => 'templates/paginator']);
+        $this->loadHelper('Html', ['className' => 'Bootstrap4/Html', 'templates' => 'Appearances.templates/bootstrap4/html']);
+        $this->loadHelper('Form', ['className' => 'Bootstrap4/Form', 'templates' => 'Appearances.templates/bootstrap4/form']);
+        $this->loadHelper('Flash');
+        $this->loadHelper('Paginator', ['templates' => 'Appearances.templates/bootstrap4/paginator']);
         //  $this->loadHelper('Authentication.Identity');
     }
-
-    public function printMustache(string $template = null, $data = []): string
-    {
-        $pattern = '/(?P<helper>\w+)::(?P<method>\w+)\(((?P<var>\w+).(?P<options>\{.*\}|\w+))\)/i';
-        $data = $data->toArray();
-        if (preg_match($pattern, $template, $args)) {
-            $tmpl = current($args);
-            $args = array_filter($args, function ($r) {
-                return !is_numeric($r);
-            }, ARRAY_FILTER_USE_KEY);
-            $args += ['helper' => null, 'method' => null, 'var' => null, 'options' => false];
-
-            if ($args['helper']) {
-                $args['helper'] = $this->{$args['helper']};
-            }
-
-            if ($args['options']) {
-                $args['options'] = json_decode($args['options'], true) ?? [];
-            }
-
-            if (isset($data[$args['var']])) {
-                $args['var'] =  $data[$args['var']];
-                $args['var'] =  $args['helper']->{$args['method']}($args['var'], $args['options']);
-            }
-            $template = str_replace($tmpl, $args['var'], $template);
-        }
-
-        $pattern = '#\{\{([\w\.\?]+)\}\}#';
-        return preg_replace_callback($pattern, function ($i) use ($data) {
-            $i = end($i);
-            $def = '';
-            if (strstr($i, '??') !== false) {
-                list($i, $def) = explode('??', $i);
-            }
-
-            if (strstr($i, '.') !== false) {
-                $keys = explode('.', $i);
-                $rows = $data;
-                foreach ($keys as $k) {
-                    if (isset($rows[$k])) {
-                        $rows = $rows[$k];
-                    }
-                }
-                return is_array($rows) ? 'undefined' : $rows;
-            }
-            return !empty($data[$i]) ? $data[$i] : $def;
-        }, $template);
-    }
-
-
 }

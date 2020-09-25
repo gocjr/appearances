@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Helper\Bootstrap4;
+namespace Appearances\View\Helper\Bootstrap4;
 
 use Cake\Utility\Text;
 use Cake\View\Helper\FormHelper as BaseFormHelper;
@@ -47,7 +47,7 @@ class FormHelper extends BaseFormHelper
             case 'checkbox':
                 $options['class'] = 'form-check-input';
                 $options['templates']['multicheckboxTitle'] = '<legend>{{text}}</legend>';
-                $options['templates']['checkboxWrapper'] = '<div class="form-check my-0 py-0 ">{{label}}</div>';
+                $options['templates']['checkboxWrAppearanceser'] = '<div class="form-check my-0 py-0 ">{{label}}</div>';
                 $options['labelOptions'] = ['class' => 'p-0 m-0'];
                 break;
             case 'checkbox-inline':
@@ -56,9 +56,9 @@ class FormHelper extends BaseFormHelper
                 $options['class'] = 'form-check-input';
                 $options['multiple'] = 'checkbox';
                 $options['templates']['multicheckboxTitle'] = '<label class="font-weight-bold">{{text}}</label>';
-                $options['templates']['multicheckboxWrapper'] = '<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">{{content}}</div>';
+                $options['templates']['multicheckboxWrAppearanceser'] = '<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">{{content}}</div>';
 
-                $options['templates']['checkboxWrapper'] = '<div class="form-check mr-3">{{label}}</div>';
+                $options['templates']['checkboxWrAppearanceser'] = '<div class="form-check mr-3">{{label}}</div>';
                 $options['templates']['inputContainer'] = '<div class="form-group {{type}}{{required}}">' . $label . '<div class="form-row px-2 py-1 m-0 border rounded">{{content}}</div></div>';
                 $options['templates']['inputContainerError'] = '<div class="form-group {{type}}{{required}} error">' . $label . '<div class="form-row px-2 py-1 m-0 border rounded">{{content}}{{error}}</div></div>';
                 $options['labelOptions'] = ['class' => 'p-0 m-0'];
@@ -109,7 +109,7 @@ class FormHelper extends BaseFormHelper
                 $options['button']['title'] =  $this->icon($options['button']['icon']) . ' ' . $options['button']['title'];
             }
 
-            $button = '<div class="input-group-append">';
+            $button = '<div class="input-group-Appearancesend">';
             $button .= $this->button($options['button']['title'], $options['button']);
             $button .= '</div>';
         }

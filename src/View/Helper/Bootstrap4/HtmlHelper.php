@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Helper\Bootstrap4;
+namespace Appearances\View\Helper\Bootstrap4;
 
 use Cake\View\Helper\HtmlHelper as BaseHtmlHelper;
 

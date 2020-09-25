@@ -1,8 +1,8 @@
 <?php
 
-namespace App\View\Helper;
+namespace Appearances\View\Helper;
 
-use App\Routing\Router;
+use Appearances\Routing\Router;
 use Cake\View\Helper\UrlHelper as BaseUrlHelper;
 
 /**
