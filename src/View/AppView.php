@@ -51,8 +51,8 @@ class AppView extends View
     public function initialize(): void
     {
         $this->loadHelper('Url', ['className' => 'Url']);
-        $this->loadHelper('Html', ['className' => 'Bootstrap4/Html', 'templates' => 'Appearances.templates/bootstrap4/html']);
-        $this->loadHelper('Form', ['className' => 'Bootstrap4/Form', 'templates' => 'Appearances.templates/bootstrap4/form']);
+        $this->loadHelper('Html', ['className' => 'Appearances.Bootstrap4/Html', 'templates' => 'Appearances.templates/bootstrap4/html']);
+        $this->loadHelper('Form', ['className' => 'Appearances.Bootstrap4/Form', 'templates' => 'Appearances.templates/bootstrap4/form']);
         $this->loadHelper('Flash');
         $this->loadHelper('Paginator', ['templates' => 'Appearances.templates/bootstrap4/paginator']);
         //  $this->loadHelper('Authentication.Identity');
