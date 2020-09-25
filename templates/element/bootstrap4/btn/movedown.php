@@ -1,0 +1,2 @@
+<?php $text = __('Down'); ?>
+<a href="<?= $this->Url->build($url->move+['down']) ?>" role="button" title="<?= $text ?>" class="btn btn-secondary"><i class="fa fa-arrow-down"></i> <span><?= $text ?></span></a>

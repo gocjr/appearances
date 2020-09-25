@@ -39,14 +39,14 @@ class Plugin extends BasePlugin
     public function routes(RouteBuilder $routes): void
     {
         $routes->prefix('Admin', ['path' => '/admin'], function (RouteBuilder $builder) {
-            $builder->plugin('Appearances', ['path' => '/Appearances'], function (RouteBuilder $builder) {
+            $builder->plugin('Appearances', ['path' => '/appearances'], function (RouteBuilder $builder) {
                 $builder->connect('/', ['controller' => 'Appearances', 'action' => 'index']);
                 $builder->fallbacks();
             });
             $builder->fallbacks();
         });
 
-        $routes->plugin('Appearances', ['path' => '/Appearances'], function (RouteBuilder $builder) {
+        $routes->plugin('Appearances', ['path' => '/appearances'], function (RouteBuilder $builder) {
             $builder->fallbacks();
         });
         parent::routes($routes);

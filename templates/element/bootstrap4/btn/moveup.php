@@ -1,0 +1,2 @@
+<?php $text = __('Up'); ?>
+<a href="<?= $this->Url->build($url->move+['up']) ?>" role="button" title="<?= $text ?>"  class="btn btn-secondary"><i class="fa fa-arrow-up"></i> <span><?= $text ?></span></a>
