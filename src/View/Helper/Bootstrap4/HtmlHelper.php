@@ -4,11 +4,9 @@ namespace Appearances\View\Helper\Bootstrap4;
 
 use Cake\View\Helper\HtmlHelper as BaseHtmlHelper;
 
-use function PHPSTORM_META\map;
-
 class HtmlHelper extends BaseHtmlHelper
 {
-    protected $_clientUrl = null;
+    protected $_regexUrlSelected = null;
 
     public function initialize(array $config): void
     {
@@ -20,7 +18,8 @@ class HtmlHelper extends BaseHtmlHelper
 
     public function icon(string $name = null): string
     {
-        return $this->formatTemplate('icon', compact('name'));
+        $name = 'fas fa-' . $name;
+        return $this->formatTemplate('icon', ['class'=>$name];
     }
 
     public function isActived(&$url = null, string $regex = null)
@@ -72,7 +71,7 @@ class HtmlHelper extends BaseHtmlHelper
     public function small(string $title, array $options = []): string
     {
         return $this->formatTemplate('small', [
-            'title' => $title,
+            'text' => $title,
             'attrs' => $this->templater()->formatAttributes($options)
         ]);
     }

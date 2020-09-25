@@ -1,5 +1,7 @@
 <?php
 return [
+    'icon'=> '<i {{attrs}}></i>',
+    'small'=> '<small {{attrs}}>{{text}}</small>',
     'meta' => '<meta{{attrs}}/>',
     'metalink' => '<link href="{{url}}"{{attrs}}/>',
     'link' => '<a href="{{url}}"{{attrs}}>{{content}}</a>',

@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'icon'=> '<i {{attrs}}></i>',
+    'small'=> '<small {{attrs}}>{{text}}</small>',
     // Used for button elements in button().
     'button' => '<button{{attrs}}>{{text}}</button>',
     // Used for checkboxes in checkbox() and multiCheckbox().
