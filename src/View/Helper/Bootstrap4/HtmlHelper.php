@@ -19,7 +19,7 @@ class HtmlHelper extends BaseHtmlHelper
     public function icon(string $name = null): string
     {
         $name = 'fas fa-' . $name;
-        return $this->formatTemplate('icon', ['class'=>$name];
+        return $this->formatTemplate('icon', ['class'=>$name]);
     }
 
     public function isActived(&$url = null, string $regex = null)
